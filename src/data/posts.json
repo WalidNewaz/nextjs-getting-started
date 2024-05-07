@@ -1,0 +1,108 @@
+[
+    {
+        "title": "Hello, World!",
+        "date": "2019-01-01",
+        "content": "This is the first post on my blog.",
+        "author": "John Doe",
+        "tags": ["hello", "world"],
+        "comments": [
+            {
+                "author": "Jane Smith",
+                "date": "2019-01-02",
+                "content": "Nice post!"
+            },
+            {
+                "author": "John Doe",
+                "date": "2019-01-02",
+                "content": "Thanks!"
+            }
+        ],
+        "relatedPosts": [
+            {
+                "title": "Another Post",
+                "date": "2019-01-01",
+                "content": "This is another post on my blog.",
+                "slug": "another-post"
+            },
+            {
+                "title": "Yet Another Post",
+                "date": "2019-01-01",
+                "content": "This is yet another post on my blog.",
+                "slug": "yet-another-post"
+            }
+        ],
+        "slug": "hello-world",
+        "excerpt": "This is the first post on my blog."
+    },
+    {
+        "title": "Another Post",
+        "date": "2019-01-01",
+        "content": "This is another post on my blog.",
+        "slug": "another-post",
+        "relatedPosts": [
+            {
+                "title": "Hello, World!",
+                "date": "2019-01-01",
+                "content": "This is the first post on my blog.",
+                "slug": "hello-world"
+            },
+            {
+                "title": "Yet Another Post",
+                "date": "2019-01-01",
+                "content": "This is yet another post on my blog.",
+                "slug": "yet-another-post"
+            }
+        ],
+        "tags": ["hello", "world"],
+        "comments": [
+            {
+                "author": "Jane Smith",
+                "date": "2019-01-02",
+                "content": "Nice post!"
+            },
+            {
+                "author": "John Doe",
+                "date": "2019-01-02",
+                "content": "Thanks!"
+            }
+        ],
+        "author": "John Doe",
+        "excerpt": "This is another post on my blog."
+
+    },
+    {
+        "title": "Yet Another Post",
+        "date": "2019-01-01",
+        "content": "This is yet another post on my blog.",
+        "slug": "yet-another-post",
+        "relatedPosts": [
+            {
+                "title": "Hello, World!",
+                "date": "2019-01-01",
+                "content": "This is the first post on my blog.",
+                "slug": "hello-world"
+            },
+            {
+                "title": "Another Post",
+                "date": "2019-01-01",
+                "content": "This is another post on my blog.",
+                "slug": "another-post"
+            }
+        ],
+        "tags": ["hello", "world"],
+        "comments": [
+            {
+                "author": "Jane Smith",
+                "date": "2019-01-02",
+                "content": "Nice post!"
+            },
+            {
+                "author": "John Doe",
+                "date": "2019-01-02",
+                "content": "Thanks!"
+            }
+        ],
+        "author": "John Doe",
+        "excerpt": "This is yet another post on my blog."
+    }
+]
