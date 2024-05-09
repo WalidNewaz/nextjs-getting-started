@@ -28,7 +28,7 @@ const DynamicBlog = ({ params }: { params: { slug: string } }) => {
         <p className='text-base m-0 py-6 opacity-75'>{post?.content}</p>
         {/* Tags */}
         <div className='flex gap-2'>
-          {post?.tags.map((tag) => (
+          {post?.tags.map((tag: string) => (
             <span
               key={tag}
               className='text-xs px-2 py-1 bg-gray-200 rounded-md'
@@ -41,11 +41,11 @@ const DynamicBlog = ({ params }: { params: { slug: string } }) => {
         <div className='flex flex-col gap-2'>
           <p className='text-base m-0 py-6 opacity-75 text-lg'>Comments:</p>
           <ul className='grid gap-4'>
-            {post?.comments.map((comment, index) => (
+            {post?.comments.map((comment: any, index: number) => (
               <li key={index} className='p-4 bg-gray-100 rounded-md'>
                 <div className='flex justify-between'>
                   <p className='text-base m-0 py-4 opacity-75'>
-                    <strong>{comment.author}</strong>
+                    <strong>{comment?.author}</strong>
                   </p>
                   <p className='text-base m-0 py-4 opacity-75'>
                     {comment.date}
@@ -64,7 +64,7 @@ const DynamicBlog = ({ params }: { params: { slug: string } }) => {
             Related Posts:
           </p>
           <ul className='grid gap-4 md:grid-cols-3'>
-            {post?.relatedPosts.map((related) => {
+            {post?.relatedPosts.map((related: any) => {
               const post = posts.find((post) => post.slug === related.slug);
               return (
                 <li
@@ -87,17 +87,18 @@ const DynamicBlog = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-/**
- * This function is called during the build (build time) and not during runtime.
- * @param params
- * @returns
- */
-DynamicBlog.getInitialProps = async ({
-  query,
-}: {
-  query: { slug: string };
-}) => {
-  return { params: query };
-};
+// /**
+//  * This function is called during the build (build time) and not during runtime.
+//  * @param params
+//  * @returns
+//  */
+// DynamicBlog.getInitialProps = async ({
+//   query,
+// }: {
+//   query: { slug: string };
+// }) => {
+//   const post = posts.find((post) => post.slug === query.slug);
+//   return { post };
+// };
 
 export default DynamicBlog;
